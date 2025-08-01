@@ -9,5 +9,27 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+<script>
+  window.tovaAsyncInit = function() {
+    tova.init({
+      tenant_id: "01JYR1FT1P8567X68CCJPTJW0S",
+      bot_code: "01JYVHTYZD6SKV2FCDHYB0NZ5P",
+      ui_config: {
+        position: "right",
+        hide_greeting: false
+      },
+      extra: {}
+    });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://agents.fpt.ai/connect/sdk.js";
+    js.onload = window.tovaAsyncInit;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, "script", "tova-jssdk"));
+</script>
+    
   </body>
 </html>
